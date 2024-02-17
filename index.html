@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<meta name="description" content="Get key information of an IP Address" />
+	<meta name="author" content="Vatsal Singh" />
+	<meta name="keywords"
+		content="IP Address Tracker, IP Finder, Search IP, IP Address, Find IP Address, HTML, JavaScript, CSS, Webdevelopment project, webdev, webapp, webdevprojects, jQuery, Bootstrap-5, frontendmentor challenge" />
+
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet" />
+
+	<!-- Leaflet CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+		integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+		crossorigin="" />
+
+	<!-- Bootstrap-5 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/style.css" />
+
+	<!-- Leaflet Script -->
+	<script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+		crossorigin=""></script>
+
+	<!-- jQuery -->
+	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<!-- Custom Script -->
+	<script defer src="js/script.js"></script>
+
+	<title>Frontend Mentor | IP Address Tracker</title>
+</head>
+
+<body>
+	<div id="header-section" class="h-lg-50">
+		<div class="container">
+			<header>
+				<h1 class="text-center header-heading pt-4 pb-3 text-light fw-bold">
+					IP Address Tracker
+				</h1>
+			</header>
+
+			<main class="row justify-content-center px-4 px-sm-0">
+				<div class="col-lg-5 p-0">
+					<form autocomplete="off">
+						<div class="input-group" id="search-bar">
+							<input class="form-control" id="search-bar-main" type="text" placeholder="Search for any IP address" />
+							<button type="submit" class="input-group-text" id="btn-arrow">
+								<img src="images/icon-arrow.svg" alt="Enter" />
+							</button>
+						</div>
+					</form>
+				</div>
+
+				<!-- Result Bar -->
+				<div class="
+							col-lg-12 col-xl-10
+							text-center text-lg-start
+							bg-white
+							shadow-lg
+							p-3
+						" id="result-bar">
+					<div class="d-lg-flex justify-content-between p-2">
+						<div class="result-box px-2 mb-4 mb-lg-0 result-br" id="ip-container">
+							<h5 class="result-heading mb-1 mb-lg-2">IP Address</h5>
+							<h5 class="result-text" id="ip-address">loading...</h5>
+						</div>
+
+						<div class="result-box px-2 mb-4 mb-lg-0 result-br" id="location-container">
+							<h5 class="result-heading mb-1 mb-lg-2">Location</h5>
+							<h5 class="result-text" id="location">loading...</h5>
+						</div>
+
+						<div class="result-box px-2 mb-4 mb-lg-0 result-br">
+							<h5 class="result-heading mb-1 mb-lg-2">Timezone</h5>
+							<h5 class="result-text" id="timezone">loading...</h5>
+						</div>
+
+						<div class="result-box px-2" id="isp-container">
+							<h5 class="result-heading mb-1 mb-lg-2">ISP</h5>
+							<h5 class="result-text" id="isp">loading...</h5>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+	</div>
+
+	<div id="map"></div>
+
+	<footer class="attribution">
+		Challenge by
+		<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+		Coded by <a href="https://github.com/vatsalsinghkv">Vatsal Singh</a>.
+	</footer>
+</body>
+
+</html>
